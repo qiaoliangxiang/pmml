@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+
+group 'org.qiaoliang.pmml'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'application'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation("org.jpmml:pmml-evaluator:1.4.11")
+    implementation("org.jpmml:pmml-evaluator-extension:1.4.11")
+}
