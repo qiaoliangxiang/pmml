@@ -1,5 +1,4 @@
-# pmml
-PMML demo. 
+# PMML Demo
 
 It contains two parts
 * Python: trains a machine learning model and generates PMML file
