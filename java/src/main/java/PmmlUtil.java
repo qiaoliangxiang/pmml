@@ -77,10 +77,10 @@ public class PmmlUtil {
      */
     public Map<String, Object> evaluate(Evaluator evaluator, Map<FieldName, FieldValue> input) {
         Map<FieldName, ?> results = evaluator.evaluate(input);
-        List<TargetField> targetFields = evaluator.getTargetFields();
+        List<OutputField> targetFields = evaluator.getOutputFields();
         Map<String, Object> output = new LinkedHashMap<String, Object>();
         for (int i = 0; i < targetFields.size(); i++) {
-            TargetField field = targetFields.get(i);
+            OutputField field = targetFields.get(i);
             FieldName fieldName = field.getName();
             Object value = results.get(fieldName);
             if (value instanceof Computable) {
